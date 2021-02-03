@@ -4,6 +4,7 @@ namespace FI\Providers;
 
 use FI\Support\Directory;
 use Illuminate\Foundation\AliasLoader;
+use Illuminate\Routing\UrlGenerator;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\ServiceProvider;
 
@@ -12,18 +13,14 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      *
+     * @param UrlGenerator $url
      * @return void
      */
-    public function boot()
+    public function boot(UrlGenerator $url)
     {
         if (config('proxies.trust_all'))
         {
             request()->setTrustedProxies([request()->getClientIp()]);
-        }
-
-        if (!$this->app->environment('testing') and $this->app->config->get('app.key') == 'ReplaceThisWithYourOwnLicenseKey')
-        {
-            session()->flash('error', '<strong>' . trans('fi.error') . '</strong> - ' . 'Please enter your license key in config/app.php.');
         }
 
         $this->app->view->addLocation(base_path('custom/overrides'));
@@ -60,6 +57,9 @@ class AppServiceProvider extends ServiceProvider
         $this->app->register('FI\Providers\DashboardWidgetServiceProvider');
         $this->app->register('FI\Providers\EventServiceProvider');
         // $this->app->register('Collective\Html\HtmlServiceProvider');
+        if (env('IS_HTTPS', false)) {
+            $url->forceScheme('https');
+        }
     }
 
     /**

@@ -24,7 +24,7 @@ class SessionController extends Controller
         return view('sessions.login');
     }
 
-    public function attempt(SessionRequest $request)
+    public function attempt(SessionRequest $request): \Illuminate\Http\RedirectResponse
     {
         $rememberMe = ($request->input('remember_me')) ? true : false;
 
@@ -42,7 +42,7 @@ class SessionController extends Controller
 
     }
 
-    public function logout()
+    public function logout(): \Illuminate\Http\RedirectResponse
     {
         auth()->logout();
 
