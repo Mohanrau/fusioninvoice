@@ -7,7 +7,7 @@ class TitleSetting extends Migration
 {
     public function up()
     {
-        Setting::saveByKey('headerTitleText', 'FusionInvoice');
+        Setting::saveByKey('headerTitleText', 'G-INVOICE');
     }
 
     public function down()

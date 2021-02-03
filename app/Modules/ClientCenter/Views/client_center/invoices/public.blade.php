@@ -16,7 +16,7 @@
 
             $('.btn-pay').click(function () {
                 var $btn = $(this).button('loading');
-                
+
                 $.post("{{ route('merchant.pay') }}", {
                     driver: $(this).data('driver'),
                     urlKey: '{{ $invoice->url_key }}'
@@ -69,11 +69,11 @@
                     </div>
                 @endif
 
-                @if ($invoice->isPayable)
-                    @foreach ($merchantDrivers as $driver)
-                        <a href="javascript:void(0)" class="btn btn-primary btn-pay" data-driver="{{ $driver->getName() }}" data-loading-text="{{ trans('fi.please_wait') }}"><i class="fa fa-credit-card"></i> {{ $driver->getSetting('paymentButtonText') }}</a>
-                    @endforeach
-                @endif
+<!--                @if ($invoice->isPayable)-->
+<!--                    @foreach ($merchantDrivers as $driver)-->
+<!--                        <a href="javascript:void(0)" class="btn btn-primary btn-pay" data-driver="{{ $driver->getName() }}" data-loading-text="{{ trans('fi.please_wait') }}"><i class="fa fa-credit-card"></i> {{ $driver->getSetting('paymentButtonText') }}</a>-->
+<!--                    @endforeach-->
+<!--                @endif-->
             </div>
 
             <div class="public-doc-wrapper">

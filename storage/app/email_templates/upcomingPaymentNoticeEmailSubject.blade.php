@@ -1,0 +1,1 @@
+Upcoming Payment Due Notice: Invoice #{!! $invoice->number !!}

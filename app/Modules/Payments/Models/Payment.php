@@ -40,6 +40,8 @@ class Payment extends Model
 
     public static function boot()
     {
+        parent::boot();
+
         static::created(function ($payment)
         {
             event(new InvoiceModified($payment->invoice));

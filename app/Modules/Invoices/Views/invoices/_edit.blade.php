@@ -109,7 +109,7 @@
 
             <div class="row">
 
-                <div class="col-sm-12 table-responsive" style="overflow-x: visible;">
+                <div class="col-sm-12" style="overflow-x: visible;">
                     <div class="box box-primary">
                         <div class="box-header">
                             <h3 class="box-title">{{ trans('fi.items') }}</h3>
@@ -120,7 +120,7 @@
                             </div>
                         </div>
 
-                        <div class="box-body">
+                        <div class="box-body table-responsive">
                             <table id="item-table" class="table table-hover">
                                 <thead>
                                 <tr>

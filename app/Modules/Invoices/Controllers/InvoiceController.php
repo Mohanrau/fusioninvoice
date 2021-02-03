@@ -74,7 +74,6 @@ class InvoiceController extends Controller
         $invoice = Invoice::find($id);
 
         $pdf = PDFFactory::create();
-
         $pdf->download($invoice->html, FileNames::invoice($invoice));
     }
 }

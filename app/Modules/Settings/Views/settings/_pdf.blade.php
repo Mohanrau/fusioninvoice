@@ -11,13 +11,14 @@
 
             function updatePDFOptions() {
 
-                $('.wkhtmltopdf-option').hide();
+                $('.driver-option').hide();
 
                 pdfDriver = $('#pdfDriver').val();
 
                 if (pdfDriver == 'wkhtmltopdf') {
-                    $('.wkhtmltopdf-option').show();
+                    $('.driver-option').show();
                 }
+                console.log(pdfDriver)
             }
 
         });
@@ -47,7 +48,7 @@
     {!! Form::select('setting[pdfDriver]', $pdfDrivers, config('fi.pdfDriver'), ['id' => 'pdfDriver', 'class' => 'form-control']) !!}
 </div>
 
-<div class="form-group wkhtmltopdf-option">
+<div class="form-group driver-option">
     <label>{{ trans('fi.binary_path') }}: </label>
     {!! Form::text('setting[pdfBinaryPath]', config('fi.pdfBinaryPath'), ['class' => 'form-control']) !!}
 </div>

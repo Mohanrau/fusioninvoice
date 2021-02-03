@@ -25,7 +25,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'FusionInvoice'),
+    'name' => env('APP_NAME', 'G-INVOICE MANAGER'),
 
     /*
     |--------------------------------------------------------------------------

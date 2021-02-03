@@ -1,0 +1,1 @@
+Payment Receipt for Invoice #{!! $payment->invoice->number !!}

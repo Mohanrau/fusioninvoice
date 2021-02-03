@@ -6,6 +6,7 @@
 <link href="{{ asset('assets/dist/css/skins/' . $skin) }}" rel="stylesheet" type="text/css"/>
 <link href="{{ asset('assets/style.css') }}" rel="stylesheet" type="text/css"/>
 
+
 @if (file_exists(base_path('custom/custom.css')))
     <link href="{{ asset('custom/custom.css') }}" rel="stylesheet" type="text/css"/>
 @endif

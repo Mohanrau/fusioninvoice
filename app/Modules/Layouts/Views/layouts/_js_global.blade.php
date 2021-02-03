@@ -114,9 +114,9 @@
 
     function resizeIframe(obj, minHeight) {
         obj.style.height = '';
-        var height = obj.contentWindow.document.body.scrollHeight;
+      const height = obj.contentWindow.document.body.scrollHeight
 
-        if (height < minHeight) {
+      if (height < minHeight) {
             obj.style.height = minHeight + 'px';
         }
         else {

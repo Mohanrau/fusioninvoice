@@ -26,6 +26,10 @@ class wkhtmltopdf extends PDFAbstract
         $pdf->setOption('orientation', $this->paperOrientation);
         $pdf->setOption('page-size', $this->paperSize);
         $pdf->setOption('viewport-size', '1024x768');
+        $pdf->setOption('margin-left', '0');
+        $pdf->setOption('margin-right', '0');
+        $pdf->setOption('margin-bottom', '0');
+        $pdf->setOption('margin-top', '0');
 
         return $pdf;
     }

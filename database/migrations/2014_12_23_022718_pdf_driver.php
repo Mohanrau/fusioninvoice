@@ -7,7 +7,7 @@ class PdfDriver extends Migration
 {
     public function up()
     {
-        Setting::saveByKey('pdfDriver', 'domPDF');
+        Setting::saveByKey('pdfDriver', 'puppeteer');
     }
 
     public function down()

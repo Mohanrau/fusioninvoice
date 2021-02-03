@@ -23,6 +23,7 @@ class PaymentController extends Controller
 {
     public function index()
     {
+
         $payments = Payment::select('payments.*')
             ->with(['invoice.client', 'invoice.currency', 'paymentMethod'])
             ->join('invoices', 'invoices.id', '=', 'payments.invoice_id')

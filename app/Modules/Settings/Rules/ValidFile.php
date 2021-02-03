@@ -15,7 +15,7 @@ use Illuminate\Contracts\Validation\Rule;
 
 class ValidFile implements Rule
 {
-    public function passes($attribute, $value)
+    public function passes($attribute, $value): bool
     {
         return is_file($value);
     }

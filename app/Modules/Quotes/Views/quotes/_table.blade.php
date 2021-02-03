@@ -1,4 +1,5 @@
-<table class="table table-hover" style="height: 100%;">
+<div class="table-responsive">
+  <table class="table table-hover" style="height: 100%;">
 
     <thead>
     <tr>
@@ -68,3 +69,4 @@
     </tbody>
 
 </table>
+</div>

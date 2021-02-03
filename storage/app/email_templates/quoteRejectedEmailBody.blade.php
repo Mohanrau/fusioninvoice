@@ -1,0 +1,1 @@
+<p><a href="{!! $quote->public_url !!}">Quote #{!! $quote->number !!}</a> has been REJECTED.</p>

@@ -13,8 +13,6 @@ class PaymentMethods extends Migration
         if (PaymentMethod::count() == 0)
         {
             PaymentMethod::create(['name' => trans('fi.cash')]);
-            PaymentMethod::create(['name' => trans('fi.credit_card')]);
-            PaymentMethod::create(['name' => trans('fi.online_payment')]);
         }
     }
 

@@ -17,32 +17,32 @@
 
 <div class="row">
 
-    <div class="col-md-4">
+    <div class="col-md-3">
         <div class="form-group">
             <label>{{ trans('fi.header_title_text') }}: </label>
             {!! Form::text('setting[headerTitleText]', config('fi.headerTitleText'), ['class' => 'form-control']) !!}
         </div>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-3">
         <div class="form-group">
             <label>{{ trans('fi.default_company_profile') }}: </label>
             {!! Form::select('setting[defaultCompanyProfile]', $companyProfiles, config('fi.defaultCompanyProfile'), ['class' => 'form-control']) !!}
         </div>
     </div>
 
-    <div class="col-md-4">
-        <div class="form-group">
-            <label>{{ trans('fi.version') }}: </label>
+    <div class="col-md-3">
+      <div class="form-group">
+        <label>{{ trans('fi.use_24_hour_time_format') }}: </label>
+        {!! Form::select('setting[use24HourTimeFormat]', $yesNoArray, config('fi.use24HourTimeFormat'), ['class' => 'form-control']) !!}
+      </div>
+    </div>
 
-            <div class="input-group">
-                {!! Form::text('version', config('fi.version'), ['class' => 'form-control', 'disabled' => 'disabled']) !!}
-                <span class="input-group-btn">
-					<button class="btn btn-default" id="btn-check-update"
-                            type="button">{{ trans('fi.check_for_update') }}</button>
-				</span>
-            </div>
-        </div>
+    <div class="col-md-3">
+      <div class="form-group">
+        <label>{{ trans('fi.timezone') }}: </label>
+        {!! Form::select('setting[timezone]', $timezones, config('fi.timezone'), ['class' => 'form-control']) !!}
+      </div>
     </div>
 
 </div>
@@ -67,20 +67,6 @@
         <div class="form-group">
             <label>{{ trans('fi.date_format') }}: </label>
             {!! Form::select('setting[dateFormat]', $dateFormats, config('fi.dateFormat'), ['class' => 'form-control']) !!}
-        </div>
-    </div>
-
-    <div class="col-md-3">
-        <div class="form-group">
-            <label>{{ trans('fi.use_24_hour_time_format') }}: </label>
-            {!! Form::select('setting[use24HourTimeFormat]', $yesNoArray, config('fi.use24HourTimeFormat'), ['class' => 'form-control']) !!}
-        </div>
-    </div>
-
-    <div class="col-md-3">
-        <div class="form-group">
-            <label>{{ trans('fi.timezone') }}: </label>
-            {!! Form::select('setting[timezone]', $timezones, config('fi.timezone'), ['class' => 'form-control']) !!}
         </div>
     </div>
 

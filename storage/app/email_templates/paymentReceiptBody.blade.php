@@ -1,0 +1,1 @@
+<p>Thank you! Your payment of {!! $payment->formatted_amount !!} has been applied to Invoice #{!! $payment->invoice->number !!}.</p>

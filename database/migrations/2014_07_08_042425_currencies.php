@@ -40,13 +40,9 @@ class Currencies extends Migration
             $table->decimal('exchange_rate', 10, 7)->default('1');
         });
 
-        Currency::create(['name' => 'Australian Dollar', 'code' => 'AUD', 'symbol' => '$', 'placement' => 'before', 'decimal' => '.', 'thousands' => ',']);
-        Currency::create(['name' => 'Canadian Dollar', 'code' => 'CAD', 'symbol' => '$', 'placement' => 'before', 'decimal' => '.', 'thousands' => ',']);
-        Currency::create(['name' => 'Euro', 'code' => 'EUR', 'symbol' => '€', 'placement' => 'before', 'decimal' => '.', 'thousands' => ',']);
-        Currency::create(['name' => 'Pound Sterling', 'code' => 'GBP', 'symbol' => '£', 'placement' => 'before', 'decimal' => '.', 'thousands' => ',']);
-        Currency::create(['name' => 'US Dollar', 'code' => 'USD', 'symbol' => '$', 'placement' => 'before', 'decimal' => '.', 'thousands' => ',']);
+        Currency::create(['name' => 'Malaysian Ringgit', 'code' => 'MYR', 'symbol' => 'RM', 'placement' => 'before', 'decimal' => '.', 'thousands' => ',']);
 
-        Setting::saveByKey('baseCurrency', 'USD');
+        Setting::saveByKey('baseCurrency', 'MYR');
         Setting::saveByKey('exchangeRateMode', 'automatic');
     }
 
